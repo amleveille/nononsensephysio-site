@@ -2,39 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>No Nonsense Physio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No Nonsense Physio | Professional Physiotherapy Quebec</title>
   <style>
+    :root {
+      --primary: #0056b3;
+      --dark: #222;
+      --light: #f4f7f6;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
       line-height: 1.6;
-      color: #222;
+      color: var(--dark);
+      background-color: white;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #eee;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 10px;
+      color: var(--primary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
     footer {
-      margin-top: 40px;
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
       font-size: 0.9em;
-      color: #555;
+    }
+    .contact-card {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
+<header>
   <h1>No Nonsense Physio</h1>
+  <p>Physio Sans Niaisage Inc.</p>
+</header>
 
-  <p>
-    <strong>Physio Sans Niaisage Inc.</strong><br>
-    Operating as <strong>No Nonsense Physio</strong>
-  </p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <p>
-    Quebec, Canada<br>
-    Email: <a href="mailto:info@nononsensephysio.ca">info@nononsensephysio.ca</a>
-  </p>
+<div class="container">
+  
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Based in Quebec, <strong>No Nonsense Physio</strong> provides evidence-based physiotherapy services. Our mission is to provide clear, effective, and direct care to help our clients return to their peak performance without the fluff.</p>
+  </section>
 
-  <footer>
-    © Physio Sans Niaisage Inc.
-  </footer>
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div>
+        <h3>Sports Rehabilitation</h3>
+        <p>Targeted recovery plans for athletes and active individuals looking to return to sport safely.</p>
+      </div>
+      <div>
+        <h3>Mobility Assessment</h3>
+        <p>Comprehensive biomechanical evaluations to identify and treat the root cause of pain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Location</h2>
+    <div class="contact-card">
+      <p><strong>Physio Sans Niaisage Inc.</strong></p>
+      <p>Quebec, Canada</p>
+      <p>Email: <a href="mailto:your-email@example.com">Contact our Team</a></p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Physio Sans Niaisage Inc. | All Rights Reserved.</p>
+</footer>
 
 </body>
+</html>
 </html>
