@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>No Nonsense Physio | Professional Physiotherapy Quebec</title>
+  <title>No Nonsense Physio | Physio Sans Niaisage</title>
   <style>
     :root {
       --primary: #0056b3;
       --dark: #222;
       --light: #f4f7f6;
+      --accent: #d9534f;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -20,83 +21,147 @@
     header {
       background: var(--primary);
       color: white;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
     nav {
       background: #eee;
-      padding: 10px;
+      padding: 15px;
       text-align: center;
       position: sticky;
       top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+      border-bottom: 1px solid #ddd;
     }
-    nav a {
-      margin: 0 15px;
+    nav a, .lang-btn {
       text-decoration: none;
       color: var(--primary);
       font-weight: bold;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1rem;
+    }
+    .lang-btn {
+      color: var(--accent);
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 10px;
-      color: var(--primary);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9em;
-    }
-    .contact-card {
-      background: var(--light);
-      padding: 20px;
-      border-radius: 8px;
-    }
+    section { margin-bottom: 50px; }
+    h2 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; color: var(--primary); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .card { background: var(--light); padding: 25px; border-radius: 8px; border-left: 5px solid var(--primary); }
+    footer { background: var(--dark); color: white; text-align: center; padding: 3rem; margin-top: 50px; }
+    
+    /* Language Toggle Logic */
+    .lang-fr { display: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>No Nonsense Physio</h1>
-  <p>Physio Sans Niaisage Inc.</p>
+  <div class="lang-en">
+    <h1>No Nonsense Physio</h1>
+    <p>Physio Sans Niaisage Inc.</p>
+  </div>
+  <div class="lang-fr">
+    <h1>Physio Sans Niaisage</h1>
+    <p>Physio Sans Niaisage Inc.</p>
+  </div>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
+  <span class="lang-en"><a href="#about">About</a> <a href="#apps">Apps</a> <a href="#contact">Contact</a></span>
+  <span class="lang-fr"><a href="#about">À Propos</a> <a href="#apps">Applications</a> <a href="#contact">Contact</a></span>
+  <button class="lang-btn" onclick="toggleLang()">Français / English</button>
 </nav>
 
 <div class="container">
   
   <section id="about">
-    <h2>About Us</h2>
-    <p>Based in Quebec, <strong>No Nonsense Physio</strong> provides evidence-based physiotherapy services. Our mission is to provide clear, effective, and direct care to help our clients return to their peak performance without the fluff. To further make that goal a reality, we also develop mobile apps physiotherapists and clients can use to measure their performance and progress in musculoskeletal rehabilitation.</p>
+    <div class="lang-en">
+      <h2>Evidence-Based Care</h2>
+      <p>Based in Quebec, <strong>No Nonsense Physio</strong> provides direct, effective care to help clients return to peak performance without the fluff. We cut through the noise to deliver results based on the latest musculoskeletal science.</p>
+    </div>
+    <div class="lang-fr">
+      <h2>Soins Basés sur les Données Probantes</h2>
+      <p>Basé au Québec, <strong>Physio Sans Niaisage</strong> offre des soins directs et efficaces pour aider nos clients à retrouver leur performance maximale. Nous allons droit au but pour livrer des résultats basés sur les dernières sciences musculosquelettiques.</p>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
+  <section id="apps">
+    <div class="lang-en">
+      <h2>Digital Innovation</h2>
+      <p>To make recovery more measurable, we develop specialized mobile applications for both physiotherapists and clients. Our tools track progress in real-time, ensuring rehabilitation is precise and data-driven.</p>
+    </div>
+    <div class="lang-fr">
+      <h2>Innovation Numérique</h2>
+      <p>Pour rendre la récupération plus mesurable, nous développons des applications mobiles spécialisées pour les physiothérapeutes et les clients. Nos outils suivent les progrès en temps réel, garantissant une réadaptation précise et axée sur les données.</p>
+    </div>
+  </section>
+
+  <section>
     <div class="grid">
-      <div>
-        <h3>Sports Rehabilitation</h3>
-        <p>Targeted recovery plans for athletes and active individuals looking to return to sport safely.</p>
+      <div class="card">
+        <div class="lang-en">
+          <h3>Sports Rehab</h3>
+          <p>Targeted plans for athletes to return to sport safely and quickly.</p>
+        </div>
+        <div class="lang-fr">
+          <h3>Réadaptation Sportive</h3>
+          <p>Plans ciblés pour les athlètes afin de reprendre le sport en toute sécurité.</p>
+        </div>
       </div>
-      <div>
-        <h3>Mobility & Performance Assessment Tools</h3>
+      <div class="card">
+        <div class="lang-en">
+          <h3>Performance Tracking</h3>
+          <p>Using our proprietary apps to measure range of motion and strength gains.</p>
+        </div>
+        <div class="lang-fr">
+          <h3>Suivi de Performance</h3>
+          <p>Utilisation de nos applications pour mesurer l'amplitude de mouvement et les gains de force.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="lang-en"><h2>Contact Us</h2></div>
+    <div class="lang-fr"><h2>Contactez-nous</h2></div>
+    <p><strong>Physio Sans Niaisage Inc.</strong><br>Quebec, Canada<br>
+    Email: <a href="mailto:your-email@example.com">Contact our Team</a></p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Physio Sans Niaisage Inc. | All Rights Reserved / Tous droits réservés.</p>
+</footer>
+
+<script>
+  function toggleLang() {
+    const en = document.querySelectorAll('.lang-en');
+    const fr = document.querySelectorAll('.lang-fr');
+    if (en[0].style.display === 'none') {
+      en.forEach(el => el.style.display = 'block');
+      fr.forEach(el => el.style.display = 'none');
+    } else {
+      en.forEach(el => el.style.display = 'none');
+      fr.forEach(el => el.style.display = 'block');
+    }
+  }
+</script>
+
+</body>
+</html>        <h3>Mobility & Performance Assessment Tools</h3>
         <p>Comprehensive biomechanical evaluation tools to identify and treat performance and progress throughout training and musculoskeletal rehabilitation.
       </div>
     </div>
